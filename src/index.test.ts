@@ -13,6 +13,6 @@ describe("index", () => {
     });
 
     it("sample demonstration test", () => {
-        expect(subject.getName()).toEqual("typescript-template");
+        expect(subject.getName()).toEqual("dev-lunch-1");
     });
 });

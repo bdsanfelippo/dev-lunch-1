@@ -3,7 +3,7 @@
         {name: "master"},
         {name: "next", channel: "next", prerelease: true}
     ],
-    "repositoryUrl": "https://github.com/johnsoncontrols/typescript-template.git",
+    "repositoryUrl": "https://github.com/bdsanfelippo/dev-lunch-1.git",
     "plugins": [
         ["@semantic-release/npm", {
             "npmPublish": true

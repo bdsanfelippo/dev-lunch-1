@@ -7,5 +7,5 @@
 // TODO - replace this code with your own
 
 export function getName() {
-    return "typescript-template";
+    return "dev-lunch-1";
 }

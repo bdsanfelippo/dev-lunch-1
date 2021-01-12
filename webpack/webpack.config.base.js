@@ -4,10 +4,10 @@ module.exports = {
     entry: ["./src/index.ts"],
     output: {
         path: path.resolve(__dirname, "../lib/udm"),
-        filename: "typescript-template.bundle.js",
-        library: "TypescriptTemplate",
+        filename: "dev-lunch-1.bundle.js",
+        library: "DevLunch1",
         libraryTarget: "umd",
-        publicPath: "/typescriptTemplate/"
+        publicPath: "/devLunch1/"
     },
     resolve: {
         extensions: [".ts", ".js", ".json"]

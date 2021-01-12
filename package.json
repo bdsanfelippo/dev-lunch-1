@@ -1,5 +1,5 @@
 {
-    "name": "@johnsoncontrols/typescript-template",
+    "name": "@bdsanfelippo/dev-lunch-1",
     "version": "0.0.0-semantically-released",
     "description": "An opinionated typescript template for web applications / libraries.",
     "main": "lib/esm/index.js",
@@ -15,10 +15,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/bdsanfelippo/typescript-template.git"
+        "url": "git+https://github.com/bdsanfelippo/dev-lunch-1.git"
     },
     "author": "Johnson Controls",
-    "homepage": "https://github.com/bdsanfelippo/typescript-template#readme",
+    "homepage": "https://github.com/bdsanfelippo/dev-lunch-1#readme",
     "devDependencies": {
         "@babel/core": "^7.10.2",
         "@babel/plugin-proposal-class-properties": "^7.10.1",

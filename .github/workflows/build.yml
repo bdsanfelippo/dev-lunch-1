@@ -28,9 +28,7 @@ jobs:
             - run: npm test
             - run: npm run build
             - run: npx run pack-prod
-              ### uncomment below in non-template use
-              #- run: npx semantic-release
-              ### uncomment above in non-template use
+            - run: npx semantic-release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
