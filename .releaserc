@@ -1,0 +1,12 @@
+{
+    "branches": [
+        {name: "master"},
+        {name: "next", channel: "next", prerelease: true}
+    ],
+    "repositoryUrl": "https://github.com/johnsoncontrols/typescript-template.git",
+    "plugins": [
+        ["@semantic-release/npm", {
+            "npmPublish": true
+        }]
+    ]
+}

@@ -1,0 +1,35 @@
+name: Validate
+
+on:
+    # Note: due to limitations with GitHub Actions, this will only trigger on PRs from the upstream to the upstream. If a developer
+    # creates a PR from their fork to the upstream, no PR will trigger. See link for more information.
+    # https://github.community/t5/GitHub-Actions/Will-GitHub-Actions-support-pull-request-events-from-a-fork-to-a/m-p/44488
+    pull_request:
+        types: [opened, reopened, edited, synchronize]
+
+jobs:
+    validate:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [12.x]
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - run: npm ci
+            - run: npm run lint
+            # lint does not catch typescript errors so run tsc too
+            - run: tsc --noEmit
+            - run: npm test
+            # ensure that webpack will build properly
+            - run: npm run pack-prod
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  CI: true

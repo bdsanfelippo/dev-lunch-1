@@ -1,0 +1,6 @@
+./node_modules
+
+./lib
+
+# in case users want to override any config settings
+./src/config.json

@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "krizzdewizz.goto-last-edit-location",
+        "rbbit.typescript-hero",
+        "ms-vscode.vscode-typescript-tslint-plugin",
+        "rbbit.typescript-hero",
+        "pmneo.tsimporter",
+        "eg2.vscode-npm-script",
+        "christian-kohler.npm-intellisense"
+    ]
+}
