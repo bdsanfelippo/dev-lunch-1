@@ -23,7 +23,11 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
-            - run: npm ci
+                  registry-url: "https://npm.pkg.github.com/"
+                  scope: "@bdsanfelippo"
+            # Skip post-install scripts here, as a malicious
+            # script could steal NODE_AUTH_TOKEN.
+            - run: npm ci --ignore-scripts
             - run: npm run lint
             - run: npm test
             - run: npm run build
@@ -32,4 +36,6 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  # reset the NODE_AUTH_TOKEN for the package publishing
+                  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   CI: true
