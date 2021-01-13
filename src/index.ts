@@ -7,7 +7,7 @@
 /**
  * A sample function that returns a name.
  */
-export function getName() {
+export function getTheName() {
     return "dev-lunch-1";
 }
 
@@ -15,5 +15,5 @@ export function getName() {
  * A sample function that returns a name in all caps.
  */
 export function getNameUppercase() {
-    return getName().toUpperCase();
+    return getTheName().toUpperCase();
 }
