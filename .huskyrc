@@ -1,5 +1,6 @@
 {
     "hooks": {
+        "pre-commit": "npm run sortDictionary",
         "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS",
         "pre-push": "npm run lint && tsc --noEmit && npm test",
     }

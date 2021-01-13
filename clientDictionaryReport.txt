@@ -1,0 +1,2 @@
+en-US report:
+	GOOD: There are no blank strings in en-US/clientdictionary.json
