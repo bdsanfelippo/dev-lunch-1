@@ -11,7 +11,8 @@
         "start": "concurrently \"cd standalone && npm start\" \"opener http://localhost:4100\"",
         "test": "jest --coverage",
         "lint": "npx eslint . --ext .js,.ts",
-        "release": "npx semantic-release"
+        "release": "npx semantic-release",
+        "sortDictionary": "node ./scripts/dictionarySorter.js ./"
     },
     "repository": {
         "type": "git",
@@ -47,8 +48,10 @@
         "eslint-plugin-standard": "^4.0.1",
         "husky": "^4.2.5",
         "jest": "^26.0.1",
+        "lodash": "^4.17.20",
         "opener": "^1.5.1",
         "prettier": "^2.0.5",
+        "q": "^1.5.1",
         "semantic-release": "^17.0.8",
         "style-loader": "^1.2.1",
         "ts-jest": "^26.1.0",
